@@ -1,4 +1,5 @@
 An android version of LDAR VOC check device of PHX21. All features are transplaned from C# perfectly.
+
 1.The command panel of connecting bluetooth and data moniting.
 ![Image text](https://raw.githubusercontent.com/cabinhero/ldarphx21bluetooth/master/docs/monitor.png)
 2.The value setting of background.
