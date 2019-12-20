@@ -1,0 +1,402 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TerminalActivity">
+
+    <RelativeLayout
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/command_hint"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:background="@null"
+            android:typeface="monospace"
+            android:singleLine="true">
+
+            <requestFocus />
+
+        </EditText>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/terminal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/send"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:scrollbarStyle="outsideOverlay"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clipToPadding="false">
+
+            <TextView
+                android:id="@+id/tv_terminal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textIsSelectable="false" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <TextView
+                android:id="@+id/tv_sysinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textIsSelectable="false"
+                android:typeface="monospace" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_battery_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Battery（电压）"
+                    android:textIsSelectable="false"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_battery_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false"
+                    android:typeface="monospace" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/tv_cot_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Chamber Outer Temp（燃烧室温度）"
+                    android:textIsSelectable="false"
+                    android:typeface="monospace" />
+                <TextView
+                    android:id="@+id/tv_cot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_sp_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="SamplePressure（废气排出压力）"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_airp_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="LPH2（低压氢气压力）"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_airp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_tc_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="Thermo Couple(热点偶)"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_tc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_pa_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="Pico Amps"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_pa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_sc_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="System Current"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_sc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_tp_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="TankPre(氢压力)"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_tp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_tp_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_pp_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="Pump Power（泵功率）"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_ppm_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="ppm"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_ppm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:clipToPadding="false">
+                <TextView
+                    android:id="@+id/tv_peak_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:text="peak"
+                    android:layout_weight="1"
+                    android:textIsSelectable="false" />
+                <TextView
+                    android:id="@+id/tv_peak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:layout_weight="2"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <Button
+                    android:id="@+id/btn_pump_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开泵" />
+                <Button
+                    android:id="@+id/btn_pump_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关泵"
+                     />
+                <Button
+                    android:id="@+id/btn_pump_ignite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点火"
+                    />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btn_log_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始"
+                    />
+                <Button
+                    android:id="@+id/btn_log_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束"
+                    />
+                <Button
+                    android:id="@+id/btn_detector_fid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FID"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <Button
+                    android:id="@+id/btn_get_cal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="校准"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

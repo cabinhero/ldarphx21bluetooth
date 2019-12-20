@@ -1,2 +1,1 @@
-# ldarphx21bluetooth
-The android version of LDAR VOC checker device phx21. All features are transplanted from c# to java perfectly.
+An android version of LDAR VOC check device of PHX21. All features are transplaned from C# perfectly.
