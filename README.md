@@ -9,4 +9,4 @@ An android version of LDAR VOC check device of PHX21. All features are transplan
 4.The panel of task to be checked.
 ![Image text](https://raw.githubusercontent.com/cabinhero/ldarphx21bluetooth/master/docs/tasks.png)
 5.The check panel. Datas are submited to the data server in time.
-![Image text](https://https://raw.githubusercontent.com/cabinhero/ldarphx21bluetooth/master/docs/checkdata.png)
+![Image text](https://raw.githubusercontent.com/cabinhero/ldarphx21bluetooth/master/docs/checkdata.png)
