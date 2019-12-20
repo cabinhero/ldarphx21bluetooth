@@ -1,10 +1,15 @@
 An android version of LDAR VOC check device of PHX21. All features are transplaned from C# perfectly.
 
 Problems in LDAR detection
+
 ◆ The operation area of the device area is large, so it is difficult to monitor and manage the detection process in real time. 
+
 ◆ There are many sealing points on site, so it is difficult to accurately locate them. 
+
 ◆ There is a large workload of manual data entry, and most enterprises fail to realize real-time automatic data entry.
+
 ◆ There detection process needs guidance and cooperation of Party A's personnel.
+
 
 Solutions
 1. The platform grid management the detection area, subdivides the detection area into area sub area floor component sealing point, and helps the detection personnel locate the sealing point to be tested quickly with the picture based guidance mode of the mobile end.
