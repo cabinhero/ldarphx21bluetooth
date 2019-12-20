@@ -1,5 +1,7 @@
 An android version of LDAR VOC check device of PHX21. All features are transplaned from C# perfectly.
 
+Email:summer_slimberg@qq.com
+
 Problems in LDAR detection
 
 ◆ The operation area of the device area is large, so it is difficult to monitor and manage the detection process in real time. 
