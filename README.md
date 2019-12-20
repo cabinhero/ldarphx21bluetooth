@@ -54,6 +54,9 @@ Some screenshots:
 4.The panel of task to be checked.
 
 ![Image text](https://raw.githubusercontent.com/cabinhero/ldarphx21bluetooth/master/docs/tasks.png)
-5.The check panel. Datas are submited to the data server in time.
+5.The location of check devices.
+
+![Image text](https://raw.githubusercontent.com/cabinhero/ldarphx21bluetooth/master/docs/location.png)
+6.The check panel. Datas are submited to the data server in time.
 
 ![Image text](https://raw.githubusercontent.com/cabinhero/ldarphx21bluetooth/master/docs/checkdata.png)
